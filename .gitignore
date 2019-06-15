@@ -1,1 +1,4 @@
 app/export.pkl
+.idea
+*.iml
+*.pkl

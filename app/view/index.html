@@ -1,41 +1,24 @@
-<html lang='en'>
+<html>
 <head>
-  <meta charset='utf-8'>
-  <link rel='stylesheet' href='../static/style.css'>
-  <script src='../static/client.js'></script>
+    <title></title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="../static/index.css">
 </head>
 <body>
-<div>
-  <div class='center'>
-    <div class='title'>Classify Bear Images 🐻</div>
-    <p>
-      Use images of <strong>teddy</strong> bears, <strong>black</strong> bears, <strong>grizzly</strong> bears, or
-      all three!
-    </p>
-    <div class='content'>
-      <div class='no-display'>
-        <input id='file-input'
-               class='no-display'
-               type='file'
-               name='file'
-               accept='image/*'
-               onchange='showPicked(this)'>
-      </div>
-      <button class='choose-file-button' type='button' onclick='showPicker()'>Select Image</button>
-      <div class='upload-label'>
-        <label id='upload-label'>No file chosen</label>
-      </div>
-      <div>
-        <img id='image-picked' class='no-display' alt='Chosen Image' height='200'>
-      </div>
-      <div class='analyze'>
-        <button id='analyze-button' class='analyze-button' type='button' onclick='analyze()'>Analyze</button>
-      </div>
-      <div class='result-label'>
-        <label id='result-label'></label>
-      </div>
-    </div>
-  </div>
-</div>
 </body>
+<div id="sketch">
+    <canvas id="paint"></canvas>
+</div>
+
+<div id="settings">
+    <button onclick="reset()">Reset</button>
+    <button onclick="predict()">Predict</button>
+</div>
+
+<div style="text-align: center">
+    <h3>The prediction is : </h3>
+    <h3 id="result"></h3>
+</div>
+
+<script src="../static/index.js"></script>
 </html>
